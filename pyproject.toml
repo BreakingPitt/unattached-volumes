@@ -10,7 +10,7 @@ requires = [
 readme = "README.md"
 
 [tool.poetry]
-name = "aws-unattached-volumes"
+name = "unattached-volumes"
 version = "0.1.0"
 description = "Simple utility script for managing unattached EBS volumes on AWS using Python and boto3"
 authors = ["Pedro Garcia Rodriguez <me@pgarcia.dev>"]
