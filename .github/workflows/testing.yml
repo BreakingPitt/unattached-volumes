@@ -22,5 +22,5 @@ jobs:
           pip install -r requirements.txt
       - name: Test
         run: |
-          ls tests/unattached_volumes_tests.py
+          ls -lisa
           python tests/unattached_volumes_tests.py
