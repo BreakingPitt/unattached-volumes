@@ -20,6 +20,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install -r requirements.txt
-      - name: Test basic restore and backup
+      - name: Test
         run: |
+          ls tests/unattached_volumes_tests.py
           python tests/unattached_volumes_tests.py
