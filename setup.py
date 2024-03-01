@@ -25,6 +25,12 @@ setuptools.setup(
     install_requires=[
         "boto3==1.34.50",
     ],
+    test_requires=[
+        "pytest==8.0.2",
+    ],
+    extras_requires=[
+        "pytest==8.0.2",
+    ],
     entry_points={
         "console_scripts": [
             "unattached-volumes=unattached-volumes.unattached-volumes:main"

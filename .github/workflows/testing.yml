@@ -1,29 +1,25 @@
-name: Linting
+name: Test
 
 on:
   push:
   pull_request:
-    branches: [master]
+    branches: [ initial ]
 
 jobs:
-  linting:
+  test:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.12"]
-
+        python-version: [ "3.8", "3.9", "3.10", "3.11", "3.12" ]
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python ${{ matrix.python-version }}
         uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
-      - name: Install dev dependencies
+      - name: Install dependencies
         run: |
-          pip install -r requirements-dev.txt
-      - name: Lint with Black
+          pip install -r requirements.txt
+      - name: Test basic restore and backup
         run: |
-          black --check .
-      - name: Lint with flake8.sh
-        run: |
-          flake8 . --count --show-source --statistics
+          python tests/test.py

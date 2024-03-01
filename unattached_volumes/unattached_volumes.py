@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 import argparse
 import boto3
 import logging
