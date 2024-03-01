@@ -22,4 +22,4 @@ jobs:
           pip install -r requirements.txt
       - name: Test basic restore and backup
         run: |
-          python tests/unattached_volumes.py
+          python tests/unattached_volumes_tests.py
